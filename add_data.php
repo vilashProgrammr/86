@@ -13,8 +13,7 @@ if(isset($_POST['btn-save']))
 	// sql query for inserting data into database
 	
 	// sql query execution function
-	if(mysql_query($sql_query))
-	{
+
 		?>
 		<script type="text/javascript">
 		alert('Data Are Inserted Successfully ');

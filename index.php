@@ -4,7 +4,11 @@ include_once 'dbconfig.php';
 // delete condition
 if(isset($_GET['delete_id']))
 {
-	//delete logic here
+	//delete logic here - added by rajesh
+	$sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+	mysql_query($sql_query);
+	header("Location: $_SERVER[PHP_SELF]");
+	
 	
 }
 // delete condition
@@ -28,7 +32,7 @@ function delete_id(id)
 {
 	if(confirm('Sure to Delete ?'))
 	{
-		window.location.href='index.php?delete_id='+id;
+		window.location.href='inde.php?delete_id='+id;
 	}
 }
 </script>
@@ -56,7 +60,7 @@ function delete_id(id)
     <?php
 	$sql_query="SELECT * FROM users";
 	$result_set=mysql_query($sql_query);
-	if(mysql_num_rows($result_set)>0)
+	if(mysql_num_rows($result_ssdfsdf)>0)
 	{
         while($row=mysql_fetch_row($result_set))
 		{
