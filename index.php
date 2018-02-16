@@ -3,8 +3,10 @@ include_once 'dbconfig.php';
 
 // delete condition
 if(isset($_GET['delete_id']))
-{
-	//delete logic here
+{//dj
+$sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+mysql_query($sql_query);
+header("Location: $_SERVER[PHP_SELF]");
 	
 }
 // delete condition
@@ -38,7 +40,7 @@ function delete_id(id)
 
 <div id="header">
 	<div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
+    <label>CRUD With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
     </div>
 </div>
 
